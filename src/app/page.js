@@ -14,37 +14,37 @@ export default function Page() {
 
         <div className="grid grid-cols-4 scale-90 gap-2 mt-4 mt-[-20px]">
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">sin</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">cos</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">tan</button> 
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">sin</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">cos</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">tan</button> 
           <button className="p-3 bg-red-400 rounded-md text-xl text-center font-bold hover:bg-red-500">C</button>  
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">log</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">exp</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">^</button> 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">/</button> 
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">log</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">exp</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">^</button> 
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">/</button> 
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">7</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">8</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">9</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">7</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">8</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">9</button>
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">x</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">x</button>
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">4</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">5</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">6</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">4</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">5</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">6</button>
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">-</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">-</button>
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">3</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">2</button>
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-gray-600">1</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">3</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">2</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">1</button>
 
-          <button className="p-3 bg-black rounded-md text-xl text-center font-bold hover:bg-blue-600">+</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">+</button>
 
-          <button className="col-span-2 p-3 bg-black rounded-md text-xl font-bold hover:bg-gray-600">0</button>
-          <button className="p-3 bg-black rounded-md text-xl font-bold hover:bg-blue-600">.</button>
-          <button className="p-3 bg-green-500 text-white rounded-md text-xl font-bold hover:bg-green-600">=</button>
+          <button className="col-span-2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">0</button>
+          <button className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">.</button>
+          <button className="p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
         </div>
       </div>
 
