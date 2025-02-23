@@ -13,7 +13,21 @@ export default function Page() {
   //Updates expression when button is clicked
   const handleClick = (value) => {
     console.log("Clicked:", value); // Debugging log
-    setExpression((prev) => prev + value); // Append clicked value to expression
+
+    if (value === "C")
+    {
+      setExpression("");
+    }
+    else if (["sin", "cos", "tan", "log", "exp"].includes(value))
+    {
+      setExpression((prev) => prev + value + "(");
+    }
+    else
+    {
+      setExpression((prev) => prev + value); // Append clicked value to expression
+    }
+
+
   };
 
   const clearInput = () => {
