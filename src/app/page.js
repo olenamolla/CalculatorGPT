@@ -2,33 +2,44 @@
 
 import { useState } from 'react';
 
+
+
 export default function Page() {
 
-  
-
-  const [expression, setExpression] = useState(""); // To store the user input
+const [expression, setExpression] = useState(""); // To store the user input
 
   console.log("Re-rendered! Expression:", expression);
 
   //Updates expression when button is clicked
-  const handleClick = (value) => {
+  const handleClick = async (value) => {
     console.log("Clicked:", value); // Debugging log
+    
+    if (value === "=") {
 
-    if (value === "C")
-    {
-      setExpression("");
-    }
-    else if (["sin", "cos", "tan", "log", "exp"].includes(value))
-    {
-      setExpression((prev) => prev + value + "(");
-    }
-    else
-    {
+      try {
+        const response = await fetch("/api/openai/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify( {expression} ), // send user input
+        });
+        const data = await response.json();  // get the evaluated result
+        setExpression(data.result || "Error"); //Update input field with result
+      } catch (error) {
+        console.error("API error:", error);
+        setExpression("Error");
+      }
+
+    } else if (value === "C"){
+      setExpression(""); 
+    } else if (["sin", "cos", "tan", "log", "exp"].includes(value)){
+      setExpression((prev) => prev + value + "("); 
+
+    } else {
       setExpression((prev) => prev + value); // Append clicked value to expression
     }
-
-
-  };
+};
 
   const clearInput = () => {
     setExpression("");
