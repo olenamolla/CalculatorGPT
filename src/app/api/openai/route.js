@@ -12,7 +12,7 @@ export async function POST(req) {
 
         const response = await openai.chat.completions.create({
             model: "gpt-4",
-            messages: [{ role: "user", content: `evaluate this mathematical expression: ${expression}. Only return the numeric result, use double precision.`}],
+            messages: [{ role: "user", content: `evaluate this mathematical expression: ${expression}. Only return the numeric result, use double precision. If the expression contains different expressions in brackets, you need to evaluate that as math expression too`}],
             max_tokens: 10,
         });
         

@@ -62,41 +62,40 @@ const [expression, setExpression] = useState(""); // To store the user input
 
         <div className="grid grid-cols-4 scale-90 gap-2 mt-4 mt-[-20px]">
 
-          <button onClick={()=> handleClick("sin")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">sin</button>
-          <button onClick={()=> handleClick("cos")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">cos</button>
-          <button onClick={()=> handleClick("tan")}className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">tan</button> 
-          <button onClick={clearInput} className="p-3 bg-red-400 rounded-md text-xl text-center font-bold hover:bg-red-500">C</button>  
+          <button onClick={() => handleClick("sin")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">sin</button>
+          <button onClick={() => handleClick("cos")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">cos</button>
+          <button onClick={() => handleClick("tan")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">tan</button>
+          <button onClick={clearInput} className="p-3 bg-red-400 text-black rounded-md text-xl font-bold hover:bg-red-500">C</button>
 
-          <button onClick={()=> handleClick("log")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">log</button>
-          <button onClick={()=> handleClick("exp")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">exp</button>
-
+          <button onClick={() => handleClick("log")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">log</button>
+          <button onClick={() => handleClick("exp")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">exp</button>
           <button onClick={() => handleClick("(")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">(</button>
           <button onClick={() => handleClick(")")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">)</button>
 
-          <button onClick={()=> handleClick("^")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">^</button> 
-          <button onClick={()=> handleClick("/")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">/</button> 
 
-          <button onClick={()=> handleClick("7")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">7</button>
-          <button onClick={()=> handleClick("8")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">8</button>
-          <button onClick={()=> handleClick("9")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">9</button>
+          <button onClick={() => handleClick("7")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">7</button>
+          <button onClick={() => handleClick("8")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">8</button>
+          <button onClick={() => handleClick("9")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">9</button>
+          <button onClick={() => handleClick("/")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">/</button>
+          
+          <button onClick={() => handleClick("4")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">4</button>
+          <button onClick={() => handleClick("5")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">5</button>
+          <button onClick={() => handleClick("6")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">6</button>
+          <button onClick={() => handleClick("x")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">x</button>
 
-          <button onClick={()=> handleClick("x")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">x</button>
+  {/* Row 5: 1 2 3 - */}
+          <button onClick={() => handleClick("1")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">1</button>
+          <button onClick={() => handleClick("2")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">2</button>
+          <button onClick={() => handleClick("3")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">3</button>
+          <button onClick={() => handleClick("-")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">-</button>
 
-          <button onClick={()=> handleClick("4")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">4</button>
-          <button onClick={()=> handleClick("5")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">5</button>
-          <button onClick={()=> handleClick("6")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">6</button>
+  {/* Row 6: 0 . + (0 spans 2 columns) */}
+          <button onClick={() => handleClick("0")} className="col-span-2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">0</button>
+          <button onClick={() => handleClick(".")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">.</button>
+          <button onClick={() => handleClick("+")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">+</button>
 
-          <button onClick={()=> handleClick("-")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">-</button>
-
-          <button onClick={()=> handleClick("3")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">3</button>
-          <button onClick={()=> handleClick("2")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">2</button>
-          <button onClick={()=> handleClick("1")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-gray-600">1</button>
-
-          <button onClick={()=> handleClick("+")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">+</button>
-
-          <button onClick={()=> handleClick("0")} className="col-span-2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">0</button>
-          <button onClick={()=> handleClick(".")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">.</button>
-          <button onClick={()=> handleClick("=")} className="col-span-3 p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
+  {/* Row 7: = (span full width) */}
+          <button onClick={() => handleClick("=")} className="col-span-4 p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
         </div>
       </div>
 
