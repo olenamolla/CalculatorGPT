@@ -96,7 +96,7 @@ const [expression, setExpression] = useState(""); // To store the user input
 
           <button onClick={()=> handleClick("0")} className="col-span-2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">0</button>
           <button onClick={()=> handleClick(".")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">.</button>
-          <button onClick={()=> handleClick("=")} className="p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
+          <button onClick={()=> handleClick("=")} className="col-span-3 p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
         </div>
       </div>
 
