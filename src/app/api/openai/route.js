@@ -12,8 +12,9 @@ export async function POST(req) {
 
         const response = await openai.chat.completions.create({
             model: "gpt-4",
-            messages: [{ role: "user", content: `evaluate this mathematical expression: ${expression}. Only return the numeric result, use double precision. If the expression contains different expressions in brackets, you need to evaluate that as math expression too`}],
-            max_tokens: 10,
+            messages: [{ role: "user", content: `evaluate this mathematical expression: ${expression}. Only return the numeric result, use double precision. If the expression contains different 
+                                                expressions in brackets, you need to evaluate that as math expression too. Whenever you see "x" it is a multiplication sign`}],
+            max_tokens: 100,
         });
         
         console.log("OpenAI Response:", response);
@@ -21,6 +22,7 @@ export async function POST(req) {
         // Extract the result returned from OpenAI, and trim leading/trailing whitespace
 
         let result = response.choices[0].message.content.trim();
+        console.log("Raw GPT result:", result);
 
         // Check if the result is a valid number
         if (!isNaN(result)) {

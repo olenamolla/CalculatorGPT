@@ -81,7 +81,7 @@ const [expression, setExpression] = useState(""); // To store the user input
           <button onClick={() => handleClick("4")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">4</button>
           <button onClick={() => handleClick("5")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">5</button>
           <button onClick={() => handleClick("6")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">6</button>
-          <button onClick={() => handleClick("x")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">x</button>
+          <button onClick={() => handleClick("*")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">x</button>
 
   {/* Row 5: 1 2 3 - */}
           <button onClick={() => handleClick("1")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">1</button>
