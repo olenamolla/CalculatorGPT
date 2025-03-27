@@ -47,8 +47,8 @@ const [expression, setExpression] = useState(""); // To store the user input
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-green-300">
-      <div className="w-96 h-[500px] p-6 bg-white scale-150 shadow-lg rounded-lg">
-        Calculator Box
+      <div className="w-96 h-[500px] pt-12 px-6 pb-6 bg-white scale-150 shadow-lg rounded-lg">
+        
         
         <input
           id="calculator"
