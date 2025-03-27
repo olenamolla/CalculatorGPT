@@ -69,9 +69,12 @@ const [expression, setExpression] = useState(""); // To store the user input
 
           <button onClick={() => handleClick("log")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">log</button>
           <button onClick={() => handleClick("exp")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">exp</button>
-          <button onClick={() => handleClick("(")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">(</button>
-          <button onClick={() => handleClick(")")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">)</button>
+          <button onClick={() => handleClick("^")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">^</button>
 
+          <div className="flex col-span-1 gap-1">
+          <button onClick={() => handleClick("(")} className="w-1/2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">(</button>
+          <button onClick={() => handleClick(")")} className="w-1/2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">)</button>
+          </div>
 
           <button onClick={() => handleClick("7")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">7</button>
           <button onClick={() => handleClick("8")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">8</button>
@@ -83,18 +86,18 @@ const [expression, setExpression] = useState(""); // To store the user input
           <button onClick={() => handleClick("6")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">6</button>
           <button onClick={() => handleClick("*")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">*</button>
 
-  {/* Row 5: 1 2 3 - */}
+  
           <button onClick={() => handleClick("1")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">1</button>
           <button onClick={() => handleClick("2")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">2</button>
           <button onClick={() => handleClick("3")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">3</button>
           <button onClick={() => handleClick("-")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">-</button>
 
-  {/* Row 6: 0 . + (0 spans 2 columns) */}
+  
           <button onClick={() => handleClick("0")} className="col-span-2 p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-gray-600">0</button>
           <button onClick={() => handleClick(".")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">.</button>
           <button onClick={() => handleClick("+")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">+</button>
 
-  {/* Row 7: = (span full width) */}
+  
           <button onClick={() => handleClick("=")} className="col-span-4 p-3 bg-green-500 text-black rounded-md text-xl font-bold hover:bg-green-600">=</button>
         </div>
       </div>
