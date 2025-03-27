@@ -47,7 +47,7 @@ const [expression, setExpression] = useState(""); // To store the user input
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-green-300">
-      <div className="w-96 h-[450px] p-6 bg-white scale-150 shadow-lg rounded-lg">
+      <div className="w-96 h-[500px] p-6 bg-white scale-150 shadow-lg rounded-lg">
         Calculator Box
         
         <input
@@ -69,6 +69,10 @@ const [expression, setExpression] = useState(""); // To store the user input
 
           <button onClick={()=> handleClick("log")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">log</button>
           <button onClick={()=> handleClick("exp")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">exp</button>
+
+          <button onClick={() => handleClick("(")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">(</button>
+          <button onClick={() => handleClick(")")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">)</button>
+
           <button onClick={()=> handleClick("^")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">^</button> 
           <button onClick={()=> handleClick("/")} className="p-3 bg-black text-white rounded-md text-xl text-center font-bold hover:bg-blue-600">/</button> 
 

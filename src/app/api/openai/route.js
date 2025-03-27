@@ -18,7 +18,24 @@ export async function POST(req) {
         
         console.log("OpenAI Response:", response);
         
-        return NextResponse.json({ result: response.choices[0].message.content.trim() });
+        // Extract the result returned from OpenAI, and trim leading/trailing whitespace
+
+        let result = response.choices[0].message.content.trim();
+
+        // Check if the result is a valid number
+        if (!isNaN(result)) {
+            // convert the result string to a floating point number
+            const num = parseFloat(result);
+
+            // if the number is actually an int, convert it to a plain string
+            // otherwise, leave it as is
+            result = Number.isInteger(num) ? num.toString() : num.toString();
+
+        }
+        
+        
+        return NextResponse.json({ result});
+
     } catch (error) {
         console.error("Error fetching OpenAI response:", error);
         return NextResponse.json({error: "Failed to fetch OpenAi repsonse" }, {status: 500 });
