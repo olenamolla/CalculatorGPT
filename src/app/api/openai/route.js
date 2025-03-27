@@ -12,8 +12,8 @@ export async function POST(req) {
 
         const response = await openai.chat.completions.create({
             model: "gpt-4",
-            messages: [{ role: "user", content: `evaluate this mathematical expression: ${expression}. Only return the numeric result, use double precision. If the expression contains different 
-                                                expressions in brackets, you need to evaluate that as math expression too. Whenever you see "x" it is a multiplication sign`}],
+            messages: [{ role: "user", content: `Strictly evaluate the following mathematical expression as-is, with correct operator precedence and parentheses. 
+                                                Return only the numeric result with no explanation: ${expression}`}],
             max_tokens: 100,
         });
         
