@@ -45,9 +45,13 @@ const [expression, setExpression] = useState(""); // To store the user input
     setExpression("");
   }
 
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-green-300">
-      <div className="w-96 h-[500px] pt-12 px-6 pb-6 bg-white scale-150 shadow-lg rounded-lg">
+
+    
+    <div className="min-h-screen bg-green-300 flex flex-col items-center pt-10">
+      <h1 className="text-4xl font-bold text-white mb-8">CalculatorGPT</h1> 
+      <div className="w-96 px-6 pt-6 pb-6 bg-white scale-150 shadow-lg rounded-lg">
         
         
         <input
@@ -56,12 +60,13 @@ const [expression, setExpression] = useState(""); // To store the user input
           value = {expression}
           readOnly
           placeholder="0"
-          className="w-full text-right text-3xl text-white p-3 mb-4 border mt-[-40px] rounded-md bg-black focus:outline-none"
+          className="w-full text-right text-3xl text-white p-3 mb-4 border rounded-md bg-black focus:outline-none"
           >
         </input>
 
         <div className="grid grid-cols-4 scale-90 gap-2 mt-4 mt-[-20px]">
 
+          
           <button onClick={() => handleClick("sin")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">sin</button>
           <button onClick={() => handleClick("cos")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">cos</button>
           <button onClick={() => handleClick("tan")} className="p-3 bg-black text-white rounded-md text-xl font-bold hover:bg-blue-600">tan</button>

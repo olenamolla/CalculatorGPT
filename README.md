@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CalculatorGPT
 
-## Getting Started
+CalculatorGPT is a web-based calculator built with **Next.js**, **React**, and **Tailwind CSS**. It supports basic arithmetic, trigonometric functions, logarithmic/exponential operations, and power operations. It evaluates user-entered expressions by sending them to OpenAI's API for computation.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- ✅ Basic arithmetic: `+`, `-`, `*`, `/`
+- ✅ Trigonometric functions: `sin`, `cos`, `tan`
+- ✅ Logarithmic & exponential: `log`, `exp`
+- ✅ Power operator: `^`
+- ✅ Parentheses support: `(` and `)`
+
+
+---
+
+## 🧪 Example Expressions
+
+| Expression         | Description                      | Expected Output      |
+|--------------------|----------------------------------|-----------------------|
+| `2+3*4`            | Order of operations              | `14`                  |
+| `(2+3)*4`          | With parentheses                 | `20`                  |
+| `2^3`              | Power operator                   | `8`                   |
+| `log(100)`         | Log base 10                      | `2`                   |
+| `exp(2)`           | e^2                              | `7.389056...`         |
+| `sin(30 deg)`      | Sine in degrees (see note below) | `0.5` (approx.)       |
+
+> 🔧 **Note:** Trig functions are evaluated in **radians** by default.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js (React), Tailwind CSS
+- **Backend API:** OpenAI GPT for expression evaluation
+
+---
+
+## 🧑‍💻 Running Locally
+
+To run this project locally:
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/calculator-gpt
+   cd calculator-gpt
+
+   npm install
+
+   npm run dev
+
+   http://localhost:3000
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
